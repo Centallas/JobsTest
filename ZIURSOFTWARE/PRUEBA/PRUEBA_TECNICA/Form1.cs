@@ -91,7 +91,7 @@ namespace PRUEBA_TECNICA
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("¿Esta seguro/a que desea borrar este registro?","EF CRUD Operaation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if(MessageBox.Show("¿Esta seguro/a que desea borrar este registro?"," ", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 using (DBEntities db = new DBEntities())
                 {
