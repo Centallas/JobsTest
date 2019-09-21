@@ -1,0 +1,17 @@
+USE [CCG]
+GO
+
+/****** Object:  View [dbo].[viewcoduni]    Script Date: 21/09/2019 3:09:11 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER VIEW [dbo].[viewcoduni]
+AS
+SELECT        TOP (100) PERCENT mc.NOMBRECOMERCIO, mc.RAZONSOCIAL, tr.IDTERMINAL, tr.NIT, tr.FECHAREGISTRO, tr.City, mc.CODIGOUNICO
+FROM            dbo.MAESTRO_COMERCIOS AS mc INNER JOIN
+                         dbo.TERMINALES_REGISTRADAS AS tr ON tr.CODIGOUNICO = mc.CODIGOUNICO
+GO
+
